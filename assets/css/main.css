@@ -176,7 +176,7 @@ input, select, textarea {
 	}
 
 	h4 {
-		font-size: 1.25em !important;
+		font-size: 1.2em !important;
 		line-height: 1.25em !important;
 		font-weight: 600 !important;
 		margin: 0 0 0 0 !important;
@@ -1676,12 +1676,12 @@ input, select, textarea {
 
 	.pricing-table caption {
 		font-weight: bold;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.15em;
 	}
 
 	.pricing-table th,
 	.pricing-table td {
-		padding: 4px 6px;
+		padding: 2px 6px;
 		border-bottom: 1px solid #ccc;
 	}
 
@@ -1698,6 +1698,19 @@ input, select, textarea {
 /* Center column headers without affecting data alignment */
 	.pricing-table th {
 		text-align: center;
+	}
+	
+/* Allow rounded corners on pricing tables */
+	.pricing-table {
+		border-collapse: separate;
+		border-spacing: 0;
+	}
+	
+/* Pricing table header styling */
+	.pricing-table thead th {
+		background-color: #193264;
+		color: white;
+		border-color: #193264;
 	}
 
 /* Image */
@@ -2828,3 +2841,30 @@ input, select, textarea {
 			}
 
 	}
+
+/* Custom hover color for primary buttons */
+	.button.primary:hover {
+		background-color: #196432;
+		border-color: #196432;
+		color: #fff;
+	}
+	.volume-lines {
+		padding-left: 2.0em;   /* deeper indent */
+	}
+
+	.volume-lines p {
+		margin: 0;             /* reset default spacing */
+		line-height: 1.25;     /* comfortable single spacing */
+	}
+
+	/* First line spacing */
+	.volume-lines p:first-child {
+		margin-top: -.70em;    /* small gap above 50–99 */
+	}
+
+	/* Second line spacing */
+	.volume-lines p:last-child {
+		margin-top: 0.60em;    /* larger gap above 100 or more */
+		margin-bottom: 1.0em;  /* larger gap below the block */
+	}
+
