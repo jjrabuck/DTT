@@ -96,7 +96,8 @@
     <div class="container">
         <div class="row gtr-200">
 
-            <form action="mailto:requests@dovetailtools.net?subject=Request%20Form" method="get">
+            <form method="POST" action="/__forms/submit" data-cf-form="requests">
+                <input type="hidden" name="email" value="requests@dovetailtools.net">
 
                 <div class="row gtr-200">
 
@@ -104,12 +105,12 @@
                     <div class="col-4 col-12-medium">
                         <section class="last">
 
-                            <p class="indent-1"><h3 class="dtt-green">Company Name</h3></p>
+                            <h3 class="dtt-green indent-1">Company Name</h3>
                             <p class="indent-1">
                                 <input type="text" name="Company Name" required>
                             </p>
 
-                            <p class="indent-1"><h3 class="dtt-green">Web Site</h3></p>
+                            <h3 class="dtt-green indent-1">Web Site</h3>
                             <p class="indent-1">
                                 <input type="text" name="Web Site" required>
                             </p>
@@ -121,12 +122,12 @@
                     <div class="col-4 col-12-medium">
                         <section class="last">
 
-                            <p class="indent-1"><h3 class="dtt-green">Company Address</h3></p>
+                            <h3 class="dtt-green indent-1">Company Address</h3>
                             <p class="indent-1">
                                 <textarea name="Company Address" rows="4" required></textarea>
                             </p>
 
-                            <!-- Explanatory Text (left-justified inside Column 2) -->
+                            <!-- Explanatory Text -->
                             <p class="indent-1" style="margin-top:20px;">
                                 New Customers: To request an Order form, fill in the information above and select ‘Submit’, and DoveTailTools will email the Order Form to you.
                             </p>
@@ -142,12 +143,12 @@
                     <div class="col-4 col-12-medium">
                         <section class="last">
 
-                            <p class="indent-1"><h3 class="dtt-green">Name</h3></p>
+                            <h3 class="dtt-green indent-1">Name</h3>
                             <p class="indent-1">
                                 <input type="text" name="Name" required>
                             </p>
 
-                            <p class="indent-1"><h3 class="dtt-green">Email</h3></p>
+                            <h3 class="dtt-green indent-1">Email</h3>
                             <p class="indent-1">
                                 <input type="email" name="Email" required>
                             </p>
