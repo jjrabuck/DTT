@@ -14,6 +14,30 @@
 		<meta name="robots" content="noindex, nofollow">
 		<link rel="canonical" href="https://dovetailtools.net/order.html">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			#main-wrapper form .row:first-of-type {
+				position: relative;
+				z-index: 10;
+
+			/* Remove autofill background color */
+			input:-webkit-autofill,
+			input:-webkit-autofill:hover,
+			input:-webkit-autofill:focus,
+			textarea:-webkit-autofill,
+			textarea:-webkit-autofill:hover,
+			textarea:-webkit-autofill:focus {
+				-webkit-box-shadow: 0 0 0px 1000px white inset;
+			box-shadow: 0 0 0px 1000px white inset;
+				-webkit-text-fill-color: #000;
+			}
+
+			/* Firefox */
+			input:-moz-autofill,
+			textarea:-moz-autofill {
+				box-shadow: 0 0 0px 1000px white inset;
+				-moz-text-fill-color: #000;
+			}
+		</style>
 	</head>
 	<body class="is-preload homepage">
 		<div id="page-wrapper">
@@ -91,84 +115,100 @@
 					</div>
 				</div>
 
-<!-- Main -->
+<!-- Main: Section 1 -->
 <div id="main-wrapper">
     <div class="container">
-        <div class="row gtr-200">
 
-            <form name="requests" netlify>
+        <form name="requests" method="POST" netlify>
+			<input type="hidden" name="form-name" value="requests">
 
-                <div class="row gtr-200">
+            <!-- FIRST ROW: Company/Org, Name+Email, Notes -->
+            <div class="row gtr-200">
 
-                    <!-- Column 1 -->
-                    <div class="col-4 col-12-medium">
-                        <section class="last">
+                <!-- Column 1 -->
+                <div class="col-4 col-12-medium">
+                    <section class="last">
 
-                            <h3 class="dtt-green indent-1">Company Name</h3>
-                            <p class="indent-1">
-                                <input type="text" name="Company Name" required>
-                            </p>
+                        <h3 class="dtt-green indent-1">Company / Organization</h3>
+                        <input type="text" name="Company / Organization" class="text indent-1" required>
 
-                            <h3 class="dtt-green indent-1">Web Site</h3>
-                            <p class="indent-1">
-                                <input type="text" name="Web Site" required>
-                            </p>
+                        <h3 class="dtt-green indent-1" style="margin-top:18px;">Web Site</h3>
+                        <input type="text" name="Web Site" class="text indent-1" required autocomplete="url">
 
-                        </section>
-                    </div>
+                        <p class="indent-1" style="font-size:0.9em; margin-top:5px; color:#555; text-align:center;">
+                            Your organization’s web site is used to verify eligibility.
+                        </p>
 
-                    <!-- Column 2 -->
-                    <div class="col-4 col-12-medium">
-                        <section class="last">
-
-                            <h3 class="dtt-green indent-1">Company Address</h3>
-                            <p class="indent-1">
-                                <textarea name="Company Address" rows="4" required></textarea>
-                            </p>
-
-                            <!-- Explanatory Text -->
-                            <p class="indent-1" style="margin-top:20px;">
-                                New Customers: To request an Order form, fill in the information above and select ‘Submit’, and DoveTailTools will email the Order Form to you.
-                            </p>
-
-                            <p class="indent-1">
-                                Existing Customers: An Order form will be sent to you via email automatically in the renewal month, and that Order form will allow you to order licenses for computers that do not currently have licenses as well as adjust the licenses for computers that currently have licenses.
-                            </p>
-
-                        </section>
-                    </div>
-
-                    <!-- Column 3 -->
-                    <div class="col-4 col-12-medium">
-                        <section class="last">
-
-                            <h3 class="dtt-green indent-1">Name</h3>
-                            <p class="indent-1">
-                                <input type="text" name="Name" required>
-                            </p>
-
-                            <h3 class="dtt-green indent-1">Email</h3>
-                            <p class="indent-1">
-                                <input type="email" name="Email" required>
-                            </p>
-
-                        </section>
-                    </div>
-
-                    <!-- Submit Button Row -->
-                    <div class="col-4 col-12-medium"></div>
-
-                    <div class="col-4 col-12-medium" style="text-align:center; margin-top:-10px;">
-                        <input type="submit" value="Submit" class="button primary">
-                    </div>
-
-                    <div class="col-4 col-12-medium"></div>
-
+                    </section>
                 </div>
 
-            </form>
+                <!-- Column 2 -->
+                <div class="col-4 col-12-medium">
+                    <section class="last">
 
-        </div>
+                        <h3 class="dtt-green indent-1">Name</h3>
+                        <input type="text" name="Name" class="text indent-1" required autocomplete="name">
+
+                        <h3 class="dtt-green indent-1" style="margin-top:18px;">Email</h3>
+                        <input type="email" name="Email" class="text indent-1" required autocomplete="email">
+
+                    </section>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="col-4 col-12-medium">
+                    <section class="last">
+
+                        <h3 class="dtt-green indent-1">Notes</h3>
+                        <textarea name="Notes" class="text indent-1"
+                                  style="resize:none; height:175px; line-height:1.25;"></textarea>
+
+                    </section>
+                </div>
+
+            </div>
+
+            <!-- SECOND ROW: Explanatory text centered -->
+            <div class="row gtr-200">
+
+                <!-- Empty Column 1 -->
+                <div class="col-4 col-12-medium"></div>
+
+                <!-- Column 2: Explanatory Text -->
+                <div class="col-4 col-12-medium">
+                    <section class="last">
+
+                        <p class="indent-1" style="margin-top:35px;">
+                            To request an Order Form, complete the fields above and select <strong>Submit</strong>.
+                            You will receive the Order Form by email after verification, typically within one
+                            business day.
+                        </p>
+
+                        <p class="indent-1" style="margin-top:20px; text-align:center;">
+                            All fields are required except Notes.
+                        </p>
+
+                    </section>
+                </div>
+
+                <!-- Empty Column 3 -->
+                <div class="col-4 col-12-medium"></div>
+
+            </div>
+
+            <!-- Submit Button Row -->
+            <div class="row gtr-200">
+                <div class="col-4 col-12-medium"></div>
+
+                <div class="col-4 col-12-medium" style="text-align:center; margin-top:40px;">
+                    <input type="submit" value="Submit" class="button primary">
+                </div>
+
+                <div class="col-4 col-12-medium"></div>
+            </div>
+
+        </form>
+
     </div>
 </div>
 
