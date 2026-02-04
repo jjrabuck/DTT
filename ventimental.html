@@ -105,128 +105,132 @@
 				</div>
 
             <!-- Main -->
-                <div id="main-wrapper">
-                    <div class="container">
-                        <div class="row gtr-200">
+            <div id="main-wrapper">
+                <div class="container">
+                    <div class="row gtr-200">
 
-                            <!-- Column Left -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
+                        <!-- Column Left -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
 
-                                    <h3 class="dtt-green">General</h3>
-                                    <p class="indent-1">
-                                        Ventimental calculates airflow rates for mechanical ventilation systems using the methodologies of Section 6.2 — Ventilation Rate Procedure — of ASHRAE Standard 62.1,
-                                        Ventilation and Acceptable Indoor Air Quality.
-                                    </p>
+                                <h3 class="dtt-green">General</h3>
+                                <p class="dtt-body">
+                                    Ventimental calculates airflow rates for mechanical ventilation systems using the methodologies of ASHRAE Standard 62.1 Section 6.2 - Ventilation Rate Procedure.
+                                </p>
 
-                                    <h3 class="dtt-green">Multiple Zone Systems</h3>
-                                    <p class="indent-1">
-                                        For multiple‑zone systems, both constant air volume (CAV) and variable air volume (VAV), Ventimental calculates the required outdoor air ventilation rate using either the simplified method
-                                        (ASHRAE 62.1 Section 6.2.4.3) or the alternative procedure (ASHRAE 62.1 Normative Appendix A).
-                                    </p>
+                                <hr class="dtt-divider">
 
-                                    <h3 class="dtt-green">Ventilation Rates</h3>
-                                    <p class="indent-1">
-                                        The outdoor air ventilation rates of ASHRAE 62.1 Table 6‑1 (Minimum Ventilation Rates in Breathing Zone) and the exhaust air ventilation rates of ASHRAE 62.1 Table 6‑2 (Minimum Exhaust Rates)
-                                        are combined in a single table. For example, if “Art Classroom” is selected for a zone, both the Table 6‑1 outdoor air rate and the Table 6‑2 exhaust air rate for “Art Classroom” are calculated.
-                                    </p>
-                                    <p class="indent-1">
-                                        In addition to the ventilation rates of Tables 6‑1 and 6‑2, the ventilation rates for Outpatient Health Care Facilities of ASHRAE 62.1 Normative Appendix D Table D‑1 are included.
-                                    </p>
+                                <h3 class="dtt-green">Multiple Zone Systems</h3>
+                                <p class="dtt-body">
+                                    For multiple‑zone systems, both constant air volume (CAV) and variable air volume (VAV), Ventimental calculates the required outdoor air ventilation rate using either the simplified method (ASHRAE 62.1 Section 6.2.4.3) or the alternative procedure (ASHRAE 62.1 Normative Appendix A).
+                                </p>
 
-                                    <h3 class="dtt-green">Zone Templates</h3>
-                                    <p class="indent-1">
-                                        Zone templates can be created and assigned to multiple zones, such that the inputs for the zone template (floor area, occupancy type, E<sub>z</sub>, etc.) become the default inputs for those zones.
-                                        This reduces data entry and improves consistency for projects with multiple identical spaces such as small offices, classrooms, and restrooms.
-                                    </p>
+                                <hr class="dtt-divider">
 
-                                    <h3 class="dtt-green">Input</h3>
-                                    <p class="indent-1">
-                                        Zones are input on worksheets separate from the supply fans and exhaust fans, and each zone is assigned to a supply fan and/or an exhaust fan. This methodology allows for easily switching
-                                        zone assignments from one fan to another.
-                                    </p>
+                                <h3 class="dtt-green">Ventilation Rates</h3>
+                                <p class="dtt-body">
+                                    The outdoor air ventilation rates of ASHRAE 62.1 Table 6‑1 and the exhaust air ventilation rates of Table 6‑2 are combined in a single table. Selecting a space type (e.g., “Art Classroom”) automatically applies both the Table 6‑1 outdoor air rate and the Table 6‑2 exhaust air rate.
+                                </p>
+                                <p class="dtt-body">
+                                    Ventilation rates for Outpatient Health Care Facilities from ASHRAE 62.1 Normative Appendix D Table D‑1 are also included.
+                                </p>
 
-                                </section>
-                            </div>
+                                <hr class="dtt-divider">
 
-                            <!-- Column Middle -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
+                                <h3 class="dtt-green">Zone Templates</h3>
+                                <p class="dtt-body">
+                                    Zone templates can be created and assigned to multiple zones, allowing inputs such as floor area, occupancy type, and E<sub>z</sub> to be reused. This reduces data entry and improves consistency for projects with repeated identical spaces such as small offices, classrooms, and restrooms.
+                                </p>
 
-                                    <h3 class="dtt-green">Risers</h3>
-                                    <p class="indent-1">
-                                        Risers indicate the cumulative airflow rate between the floors of the building for fans that serve more than one floor.
-                                    </p>
-                                    <p class="indent-1">
-                                        Risers are created automatically for each fan, where the floor a zone is assigned to is based on the initial characters of the zone numbers (as defined by the user).
-                                    </p>
-                                    <p class="indent-1">
-                                        Riser airflow can be upward (supply fan at the bottom or exhaust fan at the top), downward (supply fan at the top or exhaust fan at the bottom), or both upward and downward
-                                        (supply or exhaust fan located in the middle of the riser).
-                                    </p>
+                                <hr class="dtt-divider">
 
-                                    <h3 class="dtt-green">Groups</h3>
-                                    <p class="indent-1">
-                                        Multiple fans can be grouped, allowing the cumulative airflow rates of groups of fans to be analyzed.
-                                    </p>
+                                <h3 class="dtt-green">Input</h3>
+                                <p class="dtt-body">
+                                    Zones are entered on worksheets separate from supply and exhaust fans, and each zone is assigned to one or both. This structure makes it easy to reassign zones between fans as needed.
+                                </p>
 
-                                    <h3 class="dtt-green">Critical Zones</h3>
-                                    <p class="indent-1">
-                                        Critical zones are highlighted for multiple‑zone systems, simplifying the analysis and adjustment of inputs necessary to optimize outdoor airflow rates.
-                                    </p>
-
-                                    <h3 class="dtt-green">Transfer Air</h3>
-                                    <p class="indent-1">
-                                        Ventimental supports the transfer of air from zones provided with outdoor air ventilation (or where outdoor air exceeds exhaust air) to zones provided with exhaust air ventilation
-                                        (or where exhaust air exceeds outdoor air).
-                                    </p>
-                                    <p class="indent-1">
-                                        Two methods of air transfer are supported: direct zone‑to‑zone transfer and indirect transfer via plenums. Indirect transfer is necessary where air from a zone must be transferred to more than two zones,
-                                        because each zone can transfer air directly to only two other zones.
-                                    </p>
-                                    <p class="indent-1">
-                                        Plenums can represent building volumes (above‑ceiling spaces, chases, etc.), passive or fan‑forced transfer air ductwork systems, or air volumes between zones (such as door undercuts).
-                                    </p>
-
-                                </section>
-                            </div>
-
-                            <!-- Column Right -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
-
-                                    <h3 class="dtt-green">Features</h3>
-                                    <ul class="indent-1">
-                                        <li>Supports both Inch‑Pound (I‑P) and International System (SI) units.</li>
-                                        <li>480 zones.</li>
-                                        <li>30 zone templates.</li>
-                                        <li>30 supply fans.</li>
-                                        <li>30 exhaust fans.</li>
-                                        <li>8 user‑defined zone air distribution effectiveness factors (in addition to those in ASHRAE 62.1).</li>
-                                        <li>16 user‑defined zone ventilation rates (in addition to those in the Standard).</li>
-                                        <li>Risers for each fan and for 5 groups of fans, up to 10 floors.</li>
-                                        <li>Direct zone‑to‑zone air transfer and indirect air transfer via plenums.</li>
-                                        <li>Metrics for analyzing and optimizing 100% outdoor air ventilation systems.</li>
-                                        <li>All of the data is editable!</li>
-                                    </ul>
-
-                                    <h3 class="dtt-green">Limitations</h3>
-                                    <p class="indent-1">
-                                        Neither the ASHRAE 62.1 Section 6.3 Indoor Air Quality (IAQ) Procedure nor the Section 6.4 Natural Ventilation Procedure are supported.
-                                    </p>
-                                    <p class="indent-1">
-                                        Air change rate methodologies are not supported. Accordingly, the ventilation rate calculation methodologies of ASHRAE Standard 170 (Ventilation of Health Care Facilities) are not supported.
-                                    </p>
-                                    <p class="indent-1">
-                                        Though Ventimental tracks the relative pressure of each zone (whether net positive, net negative, or neutral), the pressure relationships between zones are not tracked.
-                                    </p>
-
-                                </section>
-                            </div>
-
+                            </section>
                         </div>
+
+                        <!-- Column Middle -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Risers</h3>
+                                <p class="dtt-body">
+                                    Risers show cumulative airflow between floors for fans serving more than one level. Risers are created automatically based on the initial characters of zone numbers, as defined by the user.
+                                </p>
+                                <p class="dtt-body">
+                                    Riser airflow may be upward, downward, or both, depending on the fan’s location relative to the floors it serves.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Groups</h3>
+                                <p class="dtt-body">
+                                    Fans can be grouped, allowing cumulative airflow rates for fan groups to be analyzed.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Critical Zones</h3>
+                                <p class="dtt-body">
+                                    Critical zones are highlighted for multiple‑zone systems, thereby simplifying the adjustments needed to optimize outdoor airflow rates.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Transfer Air</h3>
+                                <p class="dtt-body">
+                                    Ventimental supports transferring air from zones with outdoor air ventilation (or excess outdoor air) to zones requiring exhaust ventilation (or with excess exhaust).
+                                </p>
+                                <p class="dtt-body">
+                                    Two transfer methods are supported: direct zone‑to‑zone transfer and indirect transfer via plenums. Indirect transfer is used when air must be transferred to more than two zones, because as implemented in Ventimental each zone can transfer air directly to only two other zones.
+                                </p>
+                                <p class="dtt-body">
+                                    Plenums can represent above ceiling spaces, chases, passive or fan forced transfer air ductwork, or direct transfer air paths between zones such as door undercuts.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column Right -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Features</h3>
+
+                                <p class="dtt-bullet">Supports both Inch‑Pound (I‑P) and International System (SI) units.</p>
+                                <p class="dtt-bullet">480 zones.</p>
+                                <p class="dtt-bullet">30 zone templates.</p>
+                                <p class="dtt-bullet">30 supply fans.</p>
+                                <p class="dtt-bullet">30 exhaust fans.</p>
+                                <p class="dtt-bullet">8 user‑defined zone air distribution effectiveness factors.</p>
+                                <p class="dtt-bullet">16 user‑defined zone ventilation rates.</p>
+                                <p class="dtt-bullet">Risers for each fan and for 5 fan groups, up to 10 floors.</p>
+                                <p class="dtt-bullet">Air transfer between zones.</p>
+                                <p class="dtt-bullet">Metrics for analyzing and optimizing 100% outdoor air systems.</p>
+                                <p class="dtt-bullet">All data is editable.</p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Limitations</h3>
+                                <p class="dtt-body">
+                                    Neither the ASHRAE 62.1 Section 6.3 Indoor Air Quality (IAQ) Procedure nor the Section 6.4 Natural Ventilation Procedure are supported.
+                                </p>
+                                <p class="dtt-body">
+                                    Air change rate methodologies are not supported; therefore, the ventilation methodologies of ASHRAE Standard 170 (Ventilation of Health Care Facilities) are not included.
+                                </p>
+                                <p class="dtt-body">
+                                    While Ventimental tracks whether each zone is net positive, net negative, or neutral, it does not track pressure relationships between zones.
+                                </p>
+
+                            </section>
+                        </div>
+
                     </div>
                 </div>
+            </div>
 
             <!-- Footer -->
                 <div id="footer-wrapper">
@@ -261,5 +265,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-
 </html>

@@ -78,93 +78,201 @@
 					</header>
 				</div>
 
-			<!-- Banner -->
-				<div id="banner-wrapper">
-					<div id="banner" class="box container">
-						<div class="row">
-							<div class="col-12">
-								<h1 class="dtt-blue banner-title" style="text-align:center;">
-									Frequently Asked Questions
-								</h1>
-							</div>
-						</div>
-					</div>
-				</div>
+            <!-- Banner -->
+            <div id="banner-wrapper">
+                <div id="banner" class="box container">
+                    <div class="row">
+                        <div class="col-12">
 
-            <!-- Main -->
-                <div id="main-wrapper">
-                    <div class="container">
-                        <div class="row gtr-200">
+                            <!-- To adjust the FAQ banner height, see the 
+                                 “Adjustable pinned height for FAQ banner + TOC + gaps” 
+                                 section of main.css and modify --faq-pinned-height: ###px -->
 
-                            <!-- Empty Column Left -->
-                            <div class="col-1 col-12-medium"></div>
-
-                            <!-- Column Center Left -->
-                            <div class="col-5 col-12-medium">
-                                <section class="last">
-
-                                    <h3 class="dtt-green">Software & Hardware</h3>
-
-                                    <h3 class="dtt-red" style="padding-left:25px;">What software is required?</h3>
-                                    <p style="padding-left:50px;">
-                                        DoveTailTools spreadsheets require Microsoft Excel to be installed on the workstation.
-                                    </p>
-                                    <p style="padding-left:50px;">
-                                        DoveTailTools spreadsheets have been verified to operate correctly with Microsoft Windows 11 Pro and the Excel version included in Microsoft 365.
-                                        The spreadsheets include formulas that were not available prior to Excel 2019.
-                                    </p>
-
-                                    <h3 class="dtt-red" style="padding-left:25px;">What hardware is recommended?</h3>
-                                    <p style="padding-left:50px;">
-                                        An Intel Core i3 or AMD Ryzen 3 processor (or better), and a minimum of 16 GB of RAM, are recommended.
-                                    </p>
-
-                                    <h3 class="dtt-green">Compatibility</h3>
-
-                                    <h3 class="dtt-red" style="padding-left:25px;">Can&nbsp;</h3>
-                                    <p style="padding-left:50px;">&nbsp;</p>
-
-                                </section>
-                            </div>
-
-                            <!-- Column Center Right -->
-                            <div class="col-5 col-12-medium">
-                                <section class="last">
-
-                                    <h3 class="dtt-green">Licenses</h3>
-
-                                    <h3 class="dtt-red" style="padding-left:25px;">
-                                        For the volume discount, does each bundle count as a single license or as multiple licenses?
-                                    </h3>
-                                    <p style="padding-left:50px;">
-                                        Each bundle counts as multiple licenses toward the volume discount.  
-                                        Each HVAC bundle counts as two licenses, and each Plumbing bundle counts as four licenses.
-                                    </p>
-
-                                    <h3 class="dtt-red" style="padding-left:25px;">
-                                        Are volume discounts determined by the total number of licenses that a company has, or are volume discounts location‑specific?
-                                    </h3>
-                                    <p style="padding-left:50px;">
-                                        Volume discounts are location‑specific.  
-                                        For license agreement purposes, the location is the address on the invoice.
-                                    </p>
-
-                                    <h3 class="dtt-red" style="padding-left:25px;">
-                                        Can a license be installed on multiple workstations for the same user?
-                                    </h3>
-                                    <p style="padding-left:50px;">
-                                        No. Each license applies to a single workstation.
-                                    </p>
-
-                                </section>
-                            </div>
-
-                            <!-- Empty Column Right -->
-                            <div class="col-1 col-12-medium"></div>
+                            <h1 class="dtt-blue banner-title" style="text-align:center;">
+                                Frequently Asked Questions
+                            </h1>
 
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- TOC Banner -->
+            <div id="faq-toc-banner" class="box container">
+                <div class="row">
+
+                    <!-- Column 1 TOC -->
+                    <div class="col-4 col-12-medium faq-toc-column">
+                        <ul>
+                            <li><a href="#software">Software & Hardware</a></li>
+                            <li><a href="#licenses">Licenses</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Column 2 TOC -->
+                    <div class="col-4 col-12-medium faq-toc-column">
+                        <ul>
+                            <li><a href="#fileformat">File Format</a></li>
+                            <li><a href="#filename">File Naming & Copying</a></li>
+                    </div>
+
+                    <!-- Column 3 TOC -->
+                    <div class="col-4 col-12-medium faq-toc-column">
+                        <ul>
+                            <li><a href="#filelocation">File Location</a></li>
+                            <li><a href="#filelinking">File Linking</a></li>                        </ul>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Gap between TOC banner and FAQ content -->
+            <div style="height: 3.75em;"></div>
+
+            <!-- Main -->
+            <div id="main-wrapper">
+                <div class="container">
+                    <div class="row gtr-200">
+
+                        <!-- Column 1 -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <!-- Software & Hardware -->
+                                <h3 id="software" class="dtt-green">Software & Hardware</h3>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">What are the software requirements?</h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    DoveTailTools spreadsheets require Microsoft Excel to be installed on the workstation.
+                                </p>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    DoveTailTools spreadsheets have been verified to operate correctly with Microsoft Windows 11 Pro and the Excel version included in Microsoft 365. The spreadsheets include formulas that were not available prior to Excel 2019.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">What hardware is recommended?</h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    An Intel Core i3 or AMD Ryzen 3 processor (or better), and a minimum of 16 GB of RAM, are recommended.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <!-- Licenses -->
+                                <h3 id="licenses" class="dtt-green">Licenses</h3>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    For the volume discount, does each bundle count as a single license or as multiple licenses?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Each bundle counts as multiple licenses toward the volume discount. Each HVAC bundle counts as two licenses, and each Plumbing bundle counts as four licenses.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Are volume discounts determined by the total number of licenses that a company has, or are volume discounts location‑specific?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Volume discounts are location‑specific. For license agreement purposes, the location is the address on the invoice.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can a license be installed on multiple workstations for the same user?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    No. Each license applies to a single workstation.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 id="fileformat" class="dtt-green">File Format</h3>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    What is the format of the files?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    DoveTailTools spreadsheets are delivered as encrypted Windows executable (.exe) files. The files are created using XLS Padlock, a commercial tool designed specifically for creating encrypted executable files from Excel spreadsheets.
+									Though the files are Excel spreadsheets, they are opened similar to other executable Windows programs. They are not opened directly in Excel.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Are the executable files safe to run?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Yes. DoveTailTools executable files are digitally signed using a trusted code signing certificate issued by DigiCert, a widely recognized certificate authority, that helps prevent security warnings and administrative blocks that are common with unsigned
+									executable files. The digital signatures verify that the files were created by DoveTailTools and have not been tampered with or altered.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 id="filename" class="dtt-green">File Naming & Copying</h3>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can the executable files be renamed?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Yes. The executable files can be renamed for ease of identification, as long as the .exe extension is maintained. Renaming the executable files does not affect the licensing or the functionality.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can the executable files be copied?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Yes. The executable files may be copied as needed.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 id="filelocation" class="dtt-green">File Location</h3>
+								
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can the executable files be located on a server?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Yes. The executable files can be located on a shared server. Any workstation that has a license for the spreadsheet can run the files directly from the server.
+									Workstations without a license will not be able to run the files, even if they can access them.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 id="filelinking" class="dtt-green">File Linking</h3>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can the executable files be linked to other spreadsheets or other applications?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    No. The transformation of the spreadsheets into encrypted executable files removes Excel's external link capability.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can values in the executable files be copied and pasted to other documents?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Yes. Values can be copied and pasted to other documents, and in some cases the formatting may also be copied.
+									However copying from cells with formulas will copy the values in the cells only; copying from cells will not copy the formulas in the cells.
+                                </p>
+
+                                <h3 class="dtt-red" style="padding-left:25px;">
+                                    Can values from other files be copied and pasted to the executable files?
+                                </h3>
+                                <p class="dtt-body" style="padding-left:25px;">
+                                    Yes. Values can be copied and pasted from other documents, however they can only be pasted to cells designated for user input. Formulas cannot be pasted from other documents; formulas pasted from other documents are converted to their resulting values.
+                                </p>
+
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
             <!-- Footer -->
                 <div id="footer-wrapper">

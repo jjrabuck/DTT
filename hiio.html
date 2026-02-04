@@ -105,157 +105,139 @@
 				</div>
 
             <!-- Main -->
-                <div id="main-wrapper">
-                    <div class="container">
-                        <div class="row gtr-200">
+            <div id="main-wrapper">
+                <div class="container">
+                    <div class="row gtr-200">
 
-                            <!-- Column Left -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
+                        <!-- Column Left -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
 
-                                    <h3 class="dtt-green">General</h3>
-                                    <p class="indent-1">
-                                        H<sub>II</sub>O calculates the requirements of a water supply to provide sufficient flow and pressure at all of the plumbing fixtures served by a water supply.
-                                    </p>
-                                    <p class="indent-1">
-                                        In addition to serving fixtures, constant flows for irrigation, make‑up water, and similar demands are accommodated.
-                                    </p>
-                                    <p class="indent-1">
-                                        H<sub>II</sub>O generally incorporates the fixture unit methodologies included in the appendices of the International Plumbing Code (IPC), the Uniform Plumbing Code (UPC),
-                                        and the National Standard Plumbing Code (NSPC) for the sizing of water piping.
-                                    </p>
+                                <h3 class="dtt-green">General</h3>
+                                <p class="dtt-body">
+                                    H<sub>II</sub>O determines the water supply requirements needed to deliver adequate flow and pressure to all plumbing fixtures served by a system. Constant flows such as irrigation and make‑up water are also included.
+                                </p>
+                                <p class="dtt-body">
+                                    H<sub>II</sub>O incorporates the fixture unit methodologies found in the appendices of the International Plumbing Code (IPC), Uniform Plumbing Code (UPC), and National Standard Plumbing Code (NSPC).
+                                </p>
 
-                                    <h3 class="dtt-green">Segments</h3>
-                                    <p class="indent-1">
-                                        All of the pipe segments from the water supply to the fixtures served are input. The input for each segment includes the length, the elevation of the upstream (leaving) end,
-                                        and the valves and other components, as applicable.
-                                    </p>
-                                    <p class="indent-1">
-                                        Elbow quantities are automatically assigned to each segment based on the selected profile; however, the quantities can be overridden. See Elbows for additional information.
-                                    </p>
-                                    <p class="indent-1">
-                                        Sizes also are automatically assigned to each segment; however, the sizes of the individual segments can be overridden. See Sizes for additional information.
-                                    </p>
-                                    <p class="indent-1">
-                                        For systems where some of the hot water piping parallels the cold water piping, hot water pipes can be assigned to a corresponding cold water pipe, such that changes to the corresponding cold water pipe
-                                        (length, elevation, connecting segments, etc.) are automatically applied to such hot water pipes.
-                                    </p>
+                                <hr class="dtt-divider">
 
-                                    <h3 class="dtt-green">Pressure</h3>
-                                    <p class="indent-1">
-                                        The pressure loss of each segment is calculated using the Darcy‑Weisbach equation, with the equivalent lengths of elbows and tees added to the segment lengths.
-                                    </p>
-                                    <p class="indent-1">
-                                        Flow coefficients (Cv) are used to determine the pressure losses of valves and other components for each segment.
-                                    </p>
-                                    <p class="indent-1">
-                                        Each fixture is assigned an independent required pressure.
-                                    </p>
-                                    <p class="indent-1">
-                                        The pressure required at the water supply is the sum of the pressure losses of the segments serving the critical path fixture (or fixture group), plus the pressure required at that fixture,
-                                        plus the pressure difference due to the elevation difference between that fixture and the water supply.
-                                    </p>
+                                <h3 class="dtt-green">Segments</h3>
+                                <p class="dtt-body">
+                                    All pipe segments from the water source to the fixtures are entered. The input for each segment includes length, upstream elevation, valves, and other components.
+                                </p>
+                                <p class="dtt-body">
+                                    Both pipe sizes and elbow quantities are automatically assigned to each segment based on the selected profiles, but those sizes and quantities but can be overridden for each segment.
+                                </p>
+                                <p class="dtt-body">
+                                    For systems where hot water piping parallels cold water piping, hot water segments can be linked to their corresponding cold water segments such that changes to the cold water segments automatically update the hot water segments.
+                                </p>
 
-                                </section>
-                            </div>
+                                <hr class="dtt-divider">
 
-                            <!-- Column Middle -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
+                                <h3 class="dtt-green">Pressure</h3>
+                                <p class="dtt-body">
+                                    Segment pressure losses are calculated calculated using the Darcy‑Weisbach equation, with equivalent lengths for elbows and tees added to the length. Flow coefficients (Cv) are used to calculate the pressure loss of valves and components.
+                                </p>
+                                <p class="dtt-body">
+                                    Each fixture has an independent required pressure. The required pressure at the water supply equals the total pressure loss of the critical path segments, plus the critical path fixture’s required pressure, plus the elevation difference between the critical path fixture and the supply.
+                                </p>
 
-                                    <h3 class="dtt-green">Sizes</h3>
-                                    <p class="indent-1">
-                                        Multiple profiles can be created for the automatic sizing of segments, with separate profiles for cold/total water and hot water. Each profile includes all of the sizes
-                                        (3/8" to 12"), with a flow range for each size.
-                                    </p>
-                                    <p class="indent-1">
-                                        The sizes assigned by the profiles can be overridden for each segment; however, doing so reduces the automatic sizing effectiveness.
-                                    </p>
-                                    <p class="indent-1">
-                                        Additionally, a “solver” (Excel goal seek) generates profiles by calculating the flow rates corresponding to an input pressure loss rate or a velocity, with a single click.
-                                    </p>
-
-                                    <h3 class="dtt-green">Fixture Units</h3>
-                                    <p class="indent-1">
-                                        The flow of each segment is calculated in accordance with a conventional fixture unit methodology, with a non‑linear correlation between the fixture units and the flow (Hunter’s curve).
-                                        Consequently, the flow of each segment is less than the sum of the flows of the two upstream segments.
-                                    </p>
-                                    <p class="indent-1">
-                                        Each segment is designated as cold water, hot water, or combined (total) water. The fixture units for each of the three segment designations are independently assignable.
-                                        For example, a sink could be assigned 3 cold water fixture units, 3 hot water fixture units, and 4 total fixture units.
-                                    </p>
-                                    <p class="indent-1">
-                                        A selectable feature allows for incorporating the requirements of Section 610.10 from the 2021 Uniform Plumbing Code (UPC), the section that adds fixture units
-                                        for the first several flush valves.
-                                    </p>
-
-                                    <h3 class="dtt-green">Fixture Groups</h3>
-                                    <p class="indent-1">
-                                        To expedite entry, fixtures can be assigned in groups, thereby allowing for individual segments to serve multiple fixtures.
-                                    </p>
-                                    <p class="indent-1">
-                                        For example, 16 water closets, 4 urinals, and 8 lavatories could be assigned to a fixture group.
-                                    </p>
-
-                                    <h3 class="dtt-green">Elbows</h3>
-                                    <p class="indent-1">
-                                        Multiple profiles can be created for automatically adding elbows to segments. Each profile has a length‑to‑elbow‑quantity ratio for each size.
-                                    </p>
-                                    <p class="indent-1">
-                                        The number of elbows assigned by the profiles can be overridden for each segment.
-                                    </p>
-
-                                </section>
-                            </div>
-
-                            <!-- Column Right -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
-
-                                    <h3 class="dtt-green">Features</h3>
-                                    <ul class="indent-1">
-                                        <li>240 cold water segments.</li>
-                                        <li>240 hot water segments.</li>
-                                        <li>48 elevations.</li>
-                                        <li>8 cold water automatic size flow rate sets (profiles).</li>
-                                        <li>8 hot water automatic size flow rate sets (profiles).</li>
-                                        <li>3/8" to 12" pipe.</li>
-                                        <li>16 pipe types (pipe roughnesses and inside diameters).</li>
-                                        <li>8 sets of equivalent lengths for elbows and tees.</li>
-                                        <li>8 sets of automatic elbow profiles.</li>
-                                        <li>8 fixture unit‑to‑flow (Hunter’s) curves.</li>
-                                        <li>Up to 250,000 fixture units.</li>
-                                        <li>4 sets of additional fixture units for flushometer valves.</li>
-                                        <li>24 groups of fixtures.</li>
-                                        <li>8 fixtures per group, fixture quantity unlimited.</li>
-                                        <li>8 demand (flow rate) curves.</li>
-                                        <li>16 constant demands (flow rates).</li>
-                                        <li>16 valves (components with Cv values).</li>
-                                        <li>12 valve assemblies.</li>
-                                        <li>4 valves per assembly, valve quantity unlimited.</li>
-                                        <li>All of the data is editable!</li>
-                                    </ul>
-
-                                    <h3 class="dtt-green">Limitations</h3>
-                                    <p class="indent-1">
-                                        Only Inch‑Pound (I‑P) units are supported; International System (SI) units are not supported.
-                                    </p>
-                                    <p class="indent-1">
-                                        “Tree” type systems only are supported; systems where there is more than one path from the water supply to any fixture are not supported.
-                                    </p>
-
-                                    <h3 class="dtt-green">Other Considerations</h3>
-                                    <p class="indent-1">
-                                        H<sub>II</sub>O is not inherently a critical path calculator. However, where (by experience) the critical path is apparent, H<sub>II</sub>O can be used as a critical path calculator.
-                                        Doing so, however, reduces the utility of H<sub>II</sub>O with respect to automatic pipe sizing.
-                                    </p>
-
-                                </section>
-                            </div>
-
+                            </section>
                         </div>
+
+                        <!-- Column Middle -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Sizes</h3>
+                                <p class="dtt-body">
+                                    Multiple sizing profiles can be created for cold/total water and hot water. Each profile includes all pipe sizes from 3/8" to 12", with a flow range assigned to each size.
+                                </p>
+                                <p class="dtt-body">
+                                    Profile assigned sizes can be overridden per segment, however doing so reduces the effectiveness of automatic sizing.
+                                </p>
+                                <p class="dtt-body">
+                                    A built‑in solver (Excel goal seek) can generate sizing profiles automatically by calculating the flow rates corresponding to an input pressure loss rate or velocity.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Fixture Units</h3>
+                                <p class="dtt-body">
+                                    Segment flow is calculated using a conventional fixture unit methodology based on Hunter’s curve, which provides a non‑linear relationship between fixture units and flow. As a result, the flow in a segment is less than the sum of the flows of its upstream segments.
+                                </p>
+                                <p class="dtt-body">
+                                    Each segment is designated as cold water, hot water, or total water, with fixture units independently assignable for each fixture for each designation. A selectable option incorporates the additional fixture unit requirements of UPC Section 610.10 for the first several flush valves.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Fixture Groups</h3>
+                                <p class="dtt-body">
+                                    Fixtures can be assigned in groups to streamline data entry. For example, a fixture group could include 16 water closets, 4 urinals, and 8 lavatories.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Elbows</h3>
+                                <p class="dtt-body">
+                                    Profiles can be created to automatically assign elbows to segments, where each profile has a length‑to‑elbow‑quantity ratio for each size. Assigned elbow quantities can be overridden per segment.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column Right -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Features</h3>
+
+                                <p class="dtt-bullet">240 cold water segments.</p>
+                                <p class="dtt-bullet">240 hot water segments.</p>
+                                <p class="dtt-bullet">48 elevations.</p>
+                                <p class="dtt-bullet">8 cold water pipe sizing profiles.</p>
+                                <p class="dtt-bullet">8 hot water pipe sizing profiles.</p>
+                                <p class="dtt-bullet">3/8" to 12" pipe.</p>
+                                <p class="dtt-bullet">16 pipe types (roughnesses and inside diameters).</p>
+                                <p class="dtt-bullet">8 sets of equivalent lengths for elbows and tees.</p>
+                                <p class="dtt-bullet">8 automatic elbow profiles.</p>
+                                <p class="dtt-bullet">8 fixture unit‑to‑flow curves.</p>
+                                <p class="dtt-bullet">Up to 250,000 fixture units.</p>
+                                <p class="dtt-bullet">4 sets of additional fixture units for flushometer valves.</p>
+                                <p class="dtt-bullet">24 fixture groups.</p>
+                                <p class="dtt-bullet">8 fixtures per group (fixture quantity unlimited).</p>
+                                <p class="dtt-bullet">16 constant demands.</p>
+                                <p class="dtt-bullet">16 valves (components with Cv values).</p>
+                                <p class="dtt-bullet">12 valve assemblies.</p>
+                                <p class="dtt-bullet">4 valves per assembly (valve quantity unlimited).</p>
+                                <p class="dtt-bullet">All data is editable.</p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Limitations</h3>
+                                <p class="dtt-body">
+                                    Only Inch‑Pound (I‑P) units are supported; SI units are not.
+                                </p>
+                                <p class="dtt-body">
+                                    Only “tree” type systems are supported; systems with more than one path from the supply to a fixture are not.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Other Considerations</h3>
+                                <p class="dtt-body">
+                                    H<sub>II</sub>O is not inherently a critical path calculator. However, when the critical path is clear by experience, H<sub>II</sub>O can be used for that purpose, though doing so reduces the effectiveness of automatic sizing.
+                                </p>
+
+                            </section>
+                        </div>
+
                     </div>
                 </div>
+            </div>
 
             <!-- Footer -->
                 <div id="footer-wrapper">

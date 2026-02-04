@@ -104,93 +104,130 @@
 					</div>
 				</div>
 
-			<!-- Main -->
-				<div id="main-wrapper">
-					<div class="container">
-						<div class="row gtr-200">
-							<div class="col-4 col-12-medium">
+            <!-- Main -->
+            <div id="main-wrapper">
+                <div class="container">
+                    <div class="row gtr-200">
 
-								<!-- Column Left -->
-									<div id="content">
-										<section class="last">
-											<h3><b><span class="dtt-green">General</span></b></h3>
-												<p style="padding-left: 25px;">Positively Gassed calculates the size related requirements of the piping, the fittings, and the valves of a positively pressurized
-												gas piping system with a sole source of gas, to provide sufficient flow and pressure at the appliances (outlets) served by the source.</p>
-												<p style="padding-left: 25px;">The intended applications for Positively Gassed are relatively low pressure constant temperature gas piping systems, where treating the
-												gas as an ideal gas will result in an accuracy acceptable for the application.</p>
-											<h3><b><span class="dtt-green">Segments</span></b></h3>
-												<p style="padding-left: 25px;">All of the pipe segments from the gas supply to the appliances served are input. The input for each segment includes the length, the valves, and other components, as applicable.</p>
-												<p style="padding-left: 25px;">Elbow quantities are automatically assigned to each segment, however the quantities can be overridden. See Elbows for additional information.</p>
-												<p style="padding-left: 25px;">Sizes also are automatically assigned to each segment, however the sizes of the individual segments can be overridden.
-												See Sizes for additional information.</p>
-											<h3><b><span class="dtt-green">Pressure</span></b></h3>
-												<p style="padding-left: 25px;">The pressure loss of the piping due to friction is calculated using the Darcy Weisbach Equation.</p>
-												<p style="padding-left: 25px;">K factors are used to determine the equivalent lengths of fittings (elbows and tees) and valves.</p>
-												<p style="padding-left: 25px;">Each appliance is assigned an independent required pressure.</p>
-												<p style="padding-left: 25px;">The pressure required at the gas supply is the sum of the pressure losses of the segments serving the critical path appliance plus the pressure required at that appliance.</p>
-										</section>
-									</div>
+                        <!-- Column Left -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
 
-							</div>
-							<div class="col-4 col-12-medium">
-								<!-- Column Middle -->
-									<div id="content">
-										<section class="last">
-											<h3><b><span class="dtt-green">Sizes</span></b></h3>
-												<p style="padding-left: 25px;">Multiple profiles can be created for the automatic sizing of segments. Each profile includes all of the sizes (1/2" to 18"), with a flow range for each size.</p>
-												<p style="padding-left: 25px;">The sizes assigned by the profiles can be overridden for each segment, however doing so reduces the automatic sizing effectiveness.</p>
-												<p style="padding-left: 25px;">Additionally, a 'solver' (Excel goal seek) generates profiles by calculating the flow rates corresponding to an input pressure loss rate, with a single click.</p>
-											<h3><b><span class="dtt-green">Groups</span></b></h3>
-												<p style="padding-left: 25px;">Appliances can be assigned in groups, thereby allowing for individual segments to serve multiple appliances, to expedite data entry.</p>
-											<h3><b><span class="dtt-green">Elbows</span></b></h3>
-												<p style="padding-left: 25px;">Multiple profiles can be created for automatically adding elbows to segments. Each profile has a length to elbow quantity ratio for each size.</p>
-												<p style="padding-left: 25px;">The number of elbows assigned by the profiles can be overridden for each segment.</p>
-											<h3><b><span class="dtt-green">Diversities</span></b></h3>
-												<p style="padding-left: 25px;">Diversities can be applied to both individual appliances and to convenience outlets, to accommodate the numerous piping systems that have either or both modulating and cycling appliances and outlets.</p>
-										</section>
-									</div>
+                                <h3 class="dtt-green">General</h3>
+                                <p class="dtt-body">
+                                    Positively Gassed determines the size related requirements of piping, fittings, and valves of a positively pressurized gas system with a single source to provide the flow and pressure needed to serve all connected appliances.
+                                </p>
+                                <p class="dtt-body">
+                                    Positively Gassed is intended for relatively low pressure, constant temperature gas systems where treating the gas as ideal provides accuracy suitable for the application.
+                                </p>
 
-							</div>
-							<div class="col-4 col-12-medium">
+                                <hr class="dtt-divider">
 
-								<!-- Column Right -->
-									<div id="content">
-										<section class="last">
-											<h3><b><span class="dtt-green">Features</span></b></h3>
-												<uL style="padding-left: 40px;">
-													<LI>Supports both Inch-Pound (I-P) and International System (SI) units.
-													<LI>240 segments.
-													<LI>1/8" to 12" pipe.
-													<LI>40 pipe types (pipe roughnesses and inside diameters).
-													<LI>8 sets of automatic elbow profiles.
-													<LI>8 groups of appliances.
-													<LI>7 appliances per group, appliance quantity unlimited.
-													<LI>48 appliances.
-													<LI>Diversities assignable to every appliance.
-													<LI>4 convenience outlets.
-													<LI>7 convenience outlet diversity profiles.
-												</uL>
-												<p style="padding-left: 25px;">All of the data is editable!</p>
-											<h3><b><span class="dtt-green">Limitations</span></b></h3>
-												<p style="padding-left: 25px;">'Tree' type systems only are supported; systems where there is more than one path from the gas supply 
-													to any appliance are not supported.</p>
-												<p style="padding-left: 25px;">The methodologies for calculating friction factors in the transition regime differ for various gases, and incorporating such methodologies
-												in Positively Gassed would be onerous for the intended applications - applications where the flow is generally in the turbulent regime. Therefore Positively Gassed incorporates
-												a simplified approximation methodology for flows in the transition regime that is the same for all gases, and therefore that will result in inaccuracy proportional to the amount
-												of the critical path piping that is in the transition regime.</p>
-												<p style="padding-left: 25px;">Elevation differences are not incorporated in the calculations. Therefore the accuracy of the calculations
-												will result in inaccuracy proportional to the extent that elevation differences affect the results.
-											<h3><b><span class="dtt-green">Other Considerations</span></b></h3>
-												<p style="padding-left: 25px;">Positively Gassed is not inherently a critical path calculator. However, where (by experience) the 
-													critical path is apparent, Positively Gassed can be used as a critical path calculator.
-													Doing so, however, reduces the utility of Positively Gassed with respect to automatic pipe sizing.</p>
-										</section>
-									</div>
+                                <h3 class="dtt-green">Segments</h3>
+                                <p class="dtt-body">
+                                    All pipe segments from the gas supply to the appliances are entered. The input for each segment includes the length, valves, and components.
+                                </p>
+                                <p class="dtt-body">
+                                    Both pipe sizes and elbow quantities are automatically assigned to each segment based on the selected profiles, but those sizes and quantities but can be overridden for each segment.
+                                </p>
 
-							</div>
-						</div>
-					</div>
-				</div>
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Pressure</h3>
+                                <p class="dtt-body">
+                                    Frictional pressure loss is calculated using the Darcy‑Weisbach equation. K‑factors are used to determine the equivalent lengths of fittings and valves.
+                                </p>
+                                <p class="dtt-body">
+                                    Each appliance has an independent required pressure. The required pressure at the gas supply equals the total pressure loss of the critical path segments plus the critical path appliance’s required pressure.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column Middle -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Sizes</h3>
+                                <p class="dtt-body">
+                                    Multiple sizing profiles can be created for automatic segment sizing. Each profile includes all pipe sizes from 1/2" to 18", with a flow range assigned to each size.
+                                </p>
+                                <p class="dtt-body">
+                                    Profile assigned sizes can be overridden per segment, however doing so reduces the effectiveness of automatic sizing.
+                                </p>
+                                <p class="dtt-body">
+                                    A built‑in solver (Excel goal seek) can generate sizing profiles automatically by calculating the flow rates corresponding to an input pressure loss rate.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Appliance Groups</h3>
+                                <p class="dtt-body">
+                                    Appliances can be assigned in groups, thereby allowing individual segments to serve multiple appliances and streamlining data entry.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Elbows</h3>
+                                <p class="dtt-body">
+                                    Profiles can be created to automatically assign elbows to segments, where each profile has a length‑to‑elbow‑quantity ratio for each size. Assigned elbow quantities can be overridden per segment.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Diversities</h3>
+                                <p class="dtt-body">
+                                    Diversities can be applied to individual appliances and convenience outlets to accommodate systems with modulating or cycling loads.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column Right -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Features</h3>
+
+                                <p class="dtt-bullet">Supports both Inch‑Pound (I‑P) and International System (SI) units.</p>
+                                <p class="dtt-bullet">240 segments.</p>
+                                <p class="dtt-bullet">1/8" to 12" pipe.</p>
+                                <p class="dtt-bullet">40 pipe types (roughnesses and inside diameters).</p>
+                                <p class="dtt-bullet">8 automatic elbow profiles.</p>
+                                <p class="dtt-bullet">8 appliance groups.</p>
+                                <p class="dtt-bullet">7 appliances per group (appliance quantity unlimited).</p>
+                                <p class="dtt-bullet">48 appliances.</p>
+                                <p class="dtt-bullet">Diversities assignable to every appliance.</p>
+                                <p class="dtt-bullet">4 convenience outlets.</p>
+                                <p class="dtt-bullet">7 convenience outlet diversity profiles.</p>
+                                <p class="dtt-bullet">All data is editable.</p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Limitations</h3>
+                                <p class="dtt-body">
+                                    Only “tree” type systems are supported; systems with more than one path from the supply to an appliance are not supported.
+                                </p>
+                                <p class="dtt-body">
+                                    Positively Gassed uses a simplified approximation for transition regime friction factors. This approach is suitable for systems where flow is predominantly turbulent, but introduces inaccuracy proportional to the amount of piping operating in the transition regime.
+                                </p>
+                                <p class="dtt-body">
+                                    Elevation differences are not included in the calculations. Therefore the accuracy decreases in proportion to the extent that elevation changes affect system pressure.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Other Considerations</h3>
+                                <p class="dtt-body">
+                                    Positively Gassed is not inherently a critical path calculator. However, when the critical path is clear by experience, Positively Gassed can be used for that purpose, though doing so reduces the effectiveness of automatic sizing.
+                                </p>
+
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
 
             <!-- Footer -->
                 <div id="footer-wrapper">
@@ -225,5 +262,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-
 </html>

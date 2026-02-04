@@ -92,7 +92,7 @@
 										<div class="inner">
 											<header>
 												<center><dtth1><b><span class="dtt-green">&nbsp&nbsp&nbsp&nbspNaturally Gassed&#8482</span></b></dtth1></center>
-												<center><dtth4><b><span class="dtt-red">Natural Gas Piping System Sizing</span></b></dtth4></center>
+												<center><dtth4><b><span class="dtt-red">Natural & LP Gas Piping System Sizing</span></b></dtth4></center>
 											</header>
 										</div>
 									</section>
@@ -105,133 +105,126 @@
 				</div>
 
             <!-- Main -->
-                <div id="main-wrapper">
-                    <div class="container">
-                        <div class="row gtr-200">
+            <div id="main-wrapper">
+                <div class="container">
+                    <div class="row gtr-200">
 
-                            <!-- Column Left -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
+                        <!-- Column Left -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
 
-                                    <h3 class="dtt-green">General</h3>
-                                    <p class="indent-1">
-                                        Naturally Gassed calculates the size‑related requirements of the piping, fittings, and valves of a sole‑source natural gas or liquified petroleum (LP)
-                                        gas piping system to provide sufficient flow and pressure at the appliances (outlets) served by the source.
-                                    </p>
-                                    <p class="indent-1">
-                                        The calculation methodologies incorporated are the piping pressure loss equations and the fitting and valve pressure loss methodology from Appendix A —
-                                        Sizing and Capacities of Gas Piping — of the 2021 International Fuel Gas Code (IFGC), and Annex B — Sizing and Capacities of Gas Piping — of the 2021 NFPA 54/ANSI Z223.1,
-                                        National Fuel Gas Code (NFGC).
-                                    </p>
+                                <h3 class="dtt-green">General</h3>
+                                <p class="dtt-body">
+                                    Naturally Gassed determines the size related requirements of piping, fittings, and valves of a sole source natural gas or liquefied petroleum (LP) gas system necessasry to provide the flow and pressure needed to serve all connected appliances.
+                                </p>
+                                <p class="dtt-body">
+                                    Naturally Gassed incorporates the pressure loss equations and fitting/valve pressure lossmethodologies from Appendix A of the 2021 International Fuel Gas Code (IFGC) and Annex B of the 2021 NFPA 54/ANSI Z223.1 National Fuel Gas Code (NFGC).
+                                </p>
 
-                                    <h3 class="dtt-green">Segments</h3>
-                                    <p class="indent-1">
-                                        All of the pipe segments from the gas supply to the appliances served are input. The input for each segment includes the length, the valves, and other components, as applicable.
-                                    </p>
-                                    <p class="indent-1">
-                                        Elbow quantities are automatically assigned to each segment; however, the quantities can be overridden. See Elbows for additional information.
-                                    </p>
-                                    <p class="indent-1">
-                                        Sizes also are automatically assigned to each segment; however, the sizes of the individual segments can be overridden. See Sizes for additional information.
-                                    </p>
+                                <hr class="dtt-divider">
 
-                                    <h3 class="dtt-green">Pressure</h3>
-                                    <p class="indent-1">
-                                        The pressure loss of each segment is calculated using the equations in the IFGC and in NFPA 54/ANSI Z223.1.
-                                    </p>
-                                    <p class="indent-1">
-                                        K‑factors are used to determine the equivalent lengths of fittings (elbows and tees) and valves.
-                                    </p>
-                                    <p class="indent-1">
-                                        Each appliance is assigned an independent required pressure.
-                                    </p>
-                                    <p class="indent-1">
-                                        The pressure required at the gas supply is the sum of the pressure losses of the segments serving the critical path appliance plus the pressure required at that appliance.
-                                    </p>
+                                <h3 class="dtt-green">Segments</h3>
+                                <p class="dtt-body">
+                                    All pipe segments from the gas supply to the appliances are entered. The input for each segment includes the length, valves, and components.
+                                </p>
+                                <p class="dtt-body">
+                                    Both pipe sizes and elbow quantities are automatically assigned to each segment based on the selected profiles, but those sizes and quantities but can be overridden for each segment.
+                                </p>
 
-                                </section>
-                            </div>
+                                <hr class="dtt-divider">
 
-                            <!-- Column Middle -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
+                                <h3 class="dtt-green">Pressure</h3>
+                                <p class="dtt-body">
+                                    Segment pressure losses are calculated using the equations in the IFGC and NFGC. K‑factors are used to determine the equivalent lengths of fittings and valves.
+                                </p>
+                                <p class="dtt-body">
+                                    Each appliance has an independent required pressure. The required pressure at the gas supply equals the total pressure loss of the critical path segments plus the critical path appliance’s required pressure.
+                                </p>
 
-                                    <h3 class="dtt-green">Sizes</h3>
-                                    <p class="indent-1">
-                                        Multiple profiles can be created for the automatic sizing of segments. Each profile includes all of the sizes (1/2" to 18"), with a flow range for each size.
-                                    </p>
-                                    <p class="indent-1">
-                                        The sizes assigned by the profiles can be overridden for each segment; however, doing so reduces the automatic sizing effectiveness.
-                                    </p>
-                                    <p class="indent-1">
-                                        Additionally, a “solver” (Excel goal seek) generates profiles by calculating the flow rates corresponding to an input pressure loss rate, with a single click.
-                                    </p>
-
-                                    <h3 class="dtt-green">Groups</h3>
-                                    <p class="indent-1">
-                                        Appliances can be assigned in groups, thereby allowing for individual segments to serve multiple appliances and expediting data entry.
-                                    </p>
-
-                                    <h3 class="dtt-green">Elbows</h3>
-                                    <p class="indent-1">
-                                        Multiple profiles can be created for automatically adding elbows to segments. Each profile has a length‑to‑elbow‑quantity ratio for each size.
-                                    </p>
-                                    <p class="indent-1">
-                                        The number of elbows assigned by the profiles can be overridden for each segment.
-                                    </p>
-
-                                    <h3 class="dtt-green">Diversities</h3>
-                                    <p class="indent-1">
-                                        Diversities can be applied to both individual appliances and to convenience outlets, to accommodate piping systems that have modulating and/or cycling appliances and outlets.
-                                    </p>
-
-                                </section>
-                            </div>
-
-                            <!-- Column Right -->
-                            <div class="col-4 col-12-medium">
-                                <section class="last">
-
-                                    <h3 class="dtt-green">Features</h3>
-                                    <ul class="indent-1">
-                                        <li>Supports both Inch‑Pound (I‑P) and International System (SI) units.</li>
-                                        <li>240 segments.</li>
-                                        <li>1/2" to 18" pipe.</li>
-                                        <li>40 pipe types (pipe roughnesses and inside diameters).</li>
-                                        <li>8 sets of automatic elbow profiles.</li>
-                                        <li>8 groups of appliances.</li>
-                                        <li>7 appliances per group, appliance quantity unlimited.</li>
-                                        <li>48 appliances.</li>
-                                        <li>Diversities assignable to every appliance.</li>
-                                        <li>4 convenience outlets.</li>
-                                        <li>7 convenience outlet diversity profiles.</li>
-                                    </ul>
-
-                                    <p class="indent-1">
-                                        All of the data is editable!
-                                    </p>
-
-                                    <h3 class="dtt-green">Limitations</h3>
-                                    <p class="indent-1">
-                                        “Tree” type systems only are supported; systems where there is more than one path from the gas supply to any appliance are not supported.
-                                    </p>
-                                    <p class="indent-1">
-                                        Naturally Gassed is not inherently a critical path calculator. However, where (by experience) the critical path is apparent, Naturally Gassed can be used as a critical path calculator.
-                                        Doing so, however, reduces the utility of Naturally Gassed with respect to automatic pipe sizing.
-                                    </p>
-
-                                    <h3 class="dtt-green">Other Considerations</h3>
-                                    <p class="indent-1">
-                                        The low‑pressure and high‑pressure formulas of IFGC Section 402.4 and NFGC Section 6.4.1 are not used. All conditions being the same,
-                                        the IFGC Appendix A Section A104 and NFGC Annex B Section B.5 formulas generally result in slightly higher pressure drops than the IFGC Section 402.4 and NFGC Section 6.4.1 formulas.
-                                    </p>
-
-                                </section>
-                            </div>
-
+                            </section>
                         </div>
+
+                        <!-- Column Middle -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Sizes</h3>
+                                <p class="dtt-body">
+                                    Multiple sizing profiles can be created for automatic segment sizing. Each profile includes all pipe sizes from 1/2" to 18", with a flow range assigned to each size.
+                                </p>
+                                <p class="dtt-body">
+                                    Profile assigned sizes can be overridden per segment, however doing so reduces the effectiveness of automatic sizing.
+                                </p>
+                                <p class="dtt-body">
+                                    A built‑in solver (Excel goal seek) can generate sizing profiles automatically by calculating the flow rates corresponding to an input pressure loss rate.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Appliance Groups</h3>
+                                <p class="dtt-body">
+                                    Appliances can be assigned in groups, thereby allowing individual segments to serve multiple appliances and streamlining data entry.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Elbows</h3>
+                                <p class="dtt-body">
+                                    Profiles can be created to automatically assign elbows to segments, where each profile has a length‑to‑elbow‑quantity ratio for each size. Assigned elbow quantities can be overridden per segment.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Diversities</h3>
+                                <p class="dtt-body">
+                                    Diversities can be applied to individual appliances and convenience outlets to accommodate systems with modulating or cycling loads.
+                                </p>
+
+                            </section>
+                        </div>
+
+                        <!-- Column Right -->
+                        <div class="col-4 col-12-medium">
+                            <section class="last">
+
+                                <h3 class="dtt-green">Features</h3>
+
+                                <p class="dtt-bullet">Supports both Inch‑Pound (I‑P) and International System (SI) units.</p>
+                                <p class="dtt-bullet">240 segments.</p>
+                                <p class="dtt-bullet">1/2" to 18" pipe.</p>
+                                <p class="dtt-bullet">40 pipe types (roughnesses and inside diameters).</p>
+                                <p class="dtt-bullet">8 automatic elbow profiles.</p>
+                                <p class="dtt-bullet">8 appliance groups.</p>
+                                <p class="dtt-bullet">7 appliances per group (appliance quantity unlimited).</p>
+                                <p class="dtt-bullet">48 appliances.</p>
+                                <p class="dtt-bullet">Diversities assignable to every appliance.</p>
+                                <p class="dtt-bullet">4 convenience outlets.</p>
+                                <p class="dtt-bullet">7 convenience outlet diversity profiles.</p>
+                                <p class="dtt-bullet">All data is editable.</p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Limitations</h3>
+                                <p class="dtt-body">
+                                    Only “tree” type systems are supported; systems with more than one path from the supply to an appliance are not supported.
+                                </p>
+                                <p class="dtt-body">
+                                    Naturally Gassed is not inherently a critical path calculator. However, when the critical path is clear by experience, Naturally Gassed can be used for that purpose, though doing so reduces the effectiveness of automatic sizing.
+                                </p>
+
+                                <hr class="dtt-divider">
+
+                                <h3 class="dtt-green">Other Considerations</h3>
+                                <p class="dtt-body">
+                                    The low pressure and high pressure formulas of IFGC Section 402.4 and NFGC Section 6.4.1 are not used. Under identical conditions, the Appendix A and Annex B formulas generally produce slightly higher pressure drops.
+                                </p>
+
+                            </section>
+                        </div>
+
                     </div>
                 </div>
+            </div>
 
             <!-- Footer -->
                 <div id="footer-wrapper">
