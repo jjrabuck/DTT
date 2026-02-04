@@ -1,7 +1,6 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Oleo+Script:400|Open+Sans:300,300italic,600,600italic,800");
-@import url('http://fonts.cdnfonts.com/css/source-sans-pro');
-@import url('http://fonts.cdnfonts.com/css/copperplate-gothic-std');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 /*
 	Verti by HTML5 UP
@@ -93,7 +92,7 @@ input, select, textarea {
 		background-position: top left, top left;
 		background-repeat: repeat-x, repeat;
 		background-size: 100% 30em, auto;
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Inter', sans-serif;
 		font-size: 13pt;
 		color: #696969;
 		font-weight: 400;
@@ -130,7 +129,7 @@ input, select, textarea {
 		}
 
 	input, select, textarea {
-		font-family: 'Source Sans Pro', sans-serif;
+		font-family: 'Inter', sans-serif;
 		font-size: 13pt;
 		color: #696969;
 		font-weight: 300;
@@ -176,7 +175,7 @@ input, select, textarea {
 	}
 
 	h4 {
-		font-size: 1.2em !important;
+		font-size: 1.0em !important;
 		line-height: 1.25em !important;
 		font-weight: 600 !important;
 		margin: 0 0 0 0 !important;
@@ -235,6 +234,157 @@ input, select, textarea {
 	p, ul, ol, dl, table {
 		margin-bottom: 1.5em;
 	}
+
+/* ========================= */
+/* DoveTailTools Custom CSS  */
+/* ========================= */
+
+/* Sub‑heads */
+.dtt-subhead {
+    padding-left: 15px;
+    margin-top: 1.2em;
+}
+
+/* Standard paragraphs */
+.dtt-body {
+    padding-left: 28px;
+    margin-top: 0.4em;
+}
+
+/* Disable HTML5UP pseudo-bullets */
+ul.dtt-list li:before,
+ul.dtt-list-nested li:before {
+    content: none !important;
+}
+
+/* Restore normal bullets */
+ul.dtt-list,
+ul.dtt-list-nested {
+    list-style-type: disc !important;
+    list-style-position: outside !important;
+    text-indent: 0 !important;
+}
+
+/* Top‑level lists (Features) */
+ul.dtt-list {
+    margin-left: 0 !important;
+    padding-left: 28px !important;
+    margin-top: 0.4em;
+}
+
+/* Nested lists under paragraphs */
+ul.dtt-list-nested {
+    margin-left: 0 !important;
+    padding-left: 48px !important;
+    margin-top: 0.4em;
+}
+.dtt-bullet {
+    padding-left: 36px;     /* your chosen indent */
+    text-indent: 0;         /* handled by ::before now */
+    margin: 0;
+    padding-bottom: 0.9em;  /* space after each bullet */
+    line-height: 1.45;
+}
+
+.dtt-bullet-nested {
+    padding-left: 60px;     /* deeper indent */
+    text-indent: 0;
+    margin: 0;
+    padding-bottom: 0.9em;
+    line-height: 1.45;
+}
+
+/* Automatically insert the bullet glyph */
+.dtt-bullet::before,
+.dtt-bullet-nested::before {
+    content: "▪";          /* your chosen small square */
+    display: inline-block;
+    width: 12px;           /* controls bullet-to-text spacing */
+    margin-left: -12px;    /* aligns bullet into the hanging indent */
+}
+
+/* Dividers */
+.dtt-divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 1.6em 0;
+}
+
+/* Dividers */
+.dtt-divider {
+    border: none;
+    border-top: 2px solid #ccc;
+    margin: 1.6em 0;
+}
+
+/* Footnote-style paragraph */
+.dtt-footnote {
+    padding-left: 60px;     /* deeper than a normal paragraph */
+    text-indent: -12px;     /* slight hanging indent */
+    margin: 0;
+    padding-bottom: 0.6em;  /* light spacing after */
+    line-height: 1.45;
+    font-size: 0.95em;      /* optional: slightly smaller */
+}
+.dtt-rowblock {
+    min-height: 150px; /* adjust as needed */
+}
+
+/* Adjustable pinned height for FAQ banner + TOC + gaps */
+:root {
+    --faq-pinned-height: 150px; /* Adjust this manually as needed */
+}
+
+/* TOC columns */
+.faq-toc-column {
+    text-align: center;
+}
+
+.faq-toc-column ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.faq-toc-column li {
+    margin-bottom: 0.4em;
+}
+
+.faq-toc-column a {
+    color: #193264; /* .dtt-blue */
+    text-decoration: none;
+    font-size: 1.25em; /* matches green category headings */
+    font-weight: 500;  /* visually matches .dtt-green */
+}
+
+.faq-toc-column a:hover {
+    text-decoration: underline;
+}
+
+/* Divider line between categories */
+.dtt-divider {
+    border: none;
+    border-bottom: 1px solid #ddd;
+    margin: 2em 0;
+}
+
+/* Subcategory items inside dropdowns */
+#nav .nav-subcategory {
+    font-size: 1em;
+    padding: 0 1em;
+}
+
+/* Add buffer above FAQ anchor targets */
+.dtt-green {
+    scroll-margin-top: 3em; /* adjust to taste: 2em–3em works well */
+}
+
+/* FAQ question headings (red) — sized between category and body text */
+.dtt-red {
+    font-size: 1.12em;
+    font-weight: 500; /* optional: keeps it visually strong */
+    margin-left: 0;   /* keeps alignment clean */
+}
 
 /* Container */
 
@@ -2093,7 +2243,7 @@ input, select, textarea {
 		#logo h1 {
 			color: #324b64;
 			border-radius: 6px;
-			font-family: 'Copperplate Gothic STD', sans-serif;
+			font-family: "Inter", Helvetica, sans-serif;
 			font-weight: 400;
 			padding: 0.7em 0.25em 0.25em 0.25em;
 			font-size: 3em;
