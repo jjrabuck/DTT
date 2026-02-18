@@ -242,13 +242,15 @@ input, select, textarea {
 /* Sub‑heads */
 .dtt-subhead {
     padding-left: 15px;
-    margin-top: 1.2em;
+    margin-top: 0.6em !important;     /* consistent spacing above red subheads */
+    margin-bottom: 0.3em !important;  /* consistent spacing below red subheads */
 }
 
 /* Standard paragraphs */
 .dtt-body {
     padding-left: 28px;
     margin-top: 0.4em;
+    margin-bottom: 1.0em !important;  /* buffer below body text for index.html grid */
 }
 
 /* Disable HTML5UP pseudo-bullets */
@@ -278,16 +280,17 @@ ul.dtt-list-nested {
     padding-left: 48px !important;
     margin-top: 0.4em;
 }
+
 .dtt-bullet {
-    padding-left: 36px;     /* your chosen indent */
-    text-indent: 0;         /* handled by ::before now */
+    padding-left: 36px;
+    text-indent: 0;
     margin: 0;
-    padding-bottom: 0.9em;  /* space after each bullet */
+    padding-bottom: 0.9em;
     line-height: 1.45;
 }
 
 .dtt-bullet-nested {
-    padding-left: 60px;     /* deeper indent */
+    padding-left: 60px;
     text-indent: 0;
     margin: 0;
     padding-bottom: 0.9em;
@@ -297,17 +300,10 @@ ul.dtt-list-nested {
 /* Automatically insert the bullet glyph */
 .dtt-bullet::before,
 .dtt-bullet-nested::before {
-    content: "▪";          /* your chosen small square */
+    content: "▪";
     display: inline-block;
-    width: 12px;           /* controls bullet-to-text spacing */
-    margin-left: -12px;    /* aligns bullet into the hanging indent */
-}
-
-/* Dividers */
-.dtt-divider {
-    border: none;
-    border-top: 2px solid #ccc;
-    margin: 1.6em 0;
+    width: 12px;
+    margin-left: -12px;
 }
 
 /* Dividers */
@@ -319,15 +315,100 @@ ul.dtt-list-nested {
 
 /* Footnote-style paragraph */
 .dtt-footnote {
-    padding-left: 60px;     /* deeper than a normal paragraph */
-    text-indent: -12px;     /* slight hanging indent */
+    padding-left: 60px;
+    text-indent: -12px;
     margin: 0;
-    padding-bottom: 0.6em;  /* light spacing after */
+    padding-bottom: 0.6em;
     line-height: 1.45;
-    font-size: 0.95em;      /* optional: slightly smaller */
+    font-size: 0.95em;
 }
-.dtt-rowblock {
-    min-height: 150px; /* adjust as needed */
+
+/* Subtle full-width section dividers on index page */
+.dtt-section-divider {
+    border-bottom: 2px solid #ddd;
+    margin: 0 0 0 0;   /* tuned to match your vertical rhythm */
+}
+
+/* ========================================= */
+/* Tightened grid + equal-height rowblocks   */
+/* ========================================= */
+
+/* Override HTML5UP row spacing */
+#main-wrapper .row {
+    margin-top: 0.4em !important;
+    margin-bottom: 0.4em !important;
+}
+
+/* Remove extra padding HTML5UP adds to columns */
+#main-wrapper .col-4,
+#main-wrapper .col-12-medium {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Remove inner padding that compresses grid height */
+#main-wrapper .col-4 > * {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Make each column a flex container */
+#main-wrapper .col-4 {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+/* Fixed height for 3×3 grid rowblocks */
+#main-wrapper .dtt-rowblock {
+    height: 17em !important;   /* adjust slightly if needed */
+    overflow: hidden !important; /* prevents flexbox stretching */
+    display: block !important;   /* disables flex behavior */
+}
+
+/* Override HTML5UP row spacing (gentle global tightening) */
+
+/* Green section headers (… programs, … modeling programs, etc.) */
+#main-wrapper h3.dtt-green {
+    margin-top: -0.5em !important;     /* tighten space ABOVE */
+    margin-bottom: 0.5em !important;  /* increase space BELOW */
+}
+
+/* Participatory line under section headers of index file*/
+.dtt-participatory {
+    color: #2f5f3f;              /* same green as .dtt-green */
+    padding-left: 16px;          /* aligns with red subheads / body text */
+    font-weight: 500;            /* matches your green headers’ visual strength */
+    font-size: 1.15em;           /* slightly smaller than .dtt-green */
+}
+
+/* Red subheads inside rowblocks */
+#main-wrapper h3.dtt-red.dtt-subhead {
+    margin-top: 0.2em !important;     /* consistent spacing above */
+    margin-bottom: 0.8em !important;  /* consistent spacing below */
+}
+
+#main-wrapper .dtt-rowblock-top {
+    margin-top: 1.5em !important;   /* tune to taste */
+}
+
+/* Reduce top padding of the main content wrapper */
+#main-wrapper {
+    padding-top: 0.5em !important;   /* try 0.5em, then tune up/down */
+}
+
+/* Remove extra top margin on the main H2 */
+#main-wrapper h2.dtt-green {
+    margin-top: 0 !important;
+}
+
+/* Top-of-column green headers that need a gap above */
+#main-wrapper h3.dtt-green-top {
+    margin-top: 1em !important;  /* tune to match FAQ look */
+}
+
+/* Top-of-column body text that needs a gap above */
+#main-wrapper p.indent-1-top {
+    margin-top: 1.5em !important;  /* tune to match FAQ look */
 }
 
 /* Adjustable pinned height for FAQ banner + TOC + gaps */
@@ -385,6 +466,10 @@ ul.dtt-list-nested {
     font-weight: 500; /* optional: keeps it visually strong */
     margin-left: 0;   /* keeps alignment clean */
 }
+
+/* ========================= */
+/* End DoveTailTools Custom CSS  */
+/* ========================= */
 
 /* Container */
 
