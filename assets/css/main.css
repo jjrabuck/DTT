@@ -467,6 +467,15 @@ ul.dtt-list-nested {
     margin-left: 0;   /* keeps alignment clean */
 }
 
+/* Netlify inline confirmation */
+#request-success.netlify-success {
+    display: block !important;
+}
+
+#request-form-wrapper.netlify-success {
+    display: none !important;
+}
+
 /* ========================= */
 /* End DoveTailTools Custom CSS  */
 /* ========================= */
@@ -1895,6 +1904,7 @@ ul.dtt-list-nested {
 	form textarea {
 		resize: none;
 	} /* Custom submit button color */
+	
 	.button.primary {
 		background-color: #193264;
 		border-color: #193264;
