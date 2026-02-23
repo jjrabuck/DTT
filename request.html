@@ -125,10 +125,18 @@
 <div id="main-wrapper">
     <div class="container">
 
-        <form name="requests" method="POST" netlify>
-			<input type="hidden" name="form-name" value="requests">
-			<input type="hidden" name="redirect" value="/index.html">
- 
+		<div id="request-form-wrapper">
+
+		<form action="https://api.staticforms.xyz/submit" method="POST">
+
+		<!-- StaticForms access key -->
+		<input type="hidden" name="accessKey" value="sf_2861a6g42kfnagn9kcc0na4e">
+
+		<input type="hidden" name="email" value="requests@dovetailtools.net">
+
+		<!-- Redirect after success -->
+		<input type="hidden" name="redirectTo" value="https://dovetailtools.pages.dev/success.html">
+
             <!-- FIRST ROW: Company/Org, Name+Email, Notes -->
             <div class="row gtr-200">
 
@@ -215,6 +223,16 @@
             </div>
 
         </form>
+
+		</div> <!-- end of request-form-wrapper -->
+
+	<div id="request-success" style="display:none; padding: 1em 0;">
+		<h3 class="dtt-green indent-1">Thank you — your request has been received.</h3>
+		<p class="indent-1" style="font-size:1.05em; color:#333;">
+			We’ll review your information and get back to you shortly.
+		</p>
+	</div>
+
 
     </div>
 </div>
